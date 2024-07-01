@@ -13,7 +13,7 @@ const app = express();
 config({ path: "config/config.env" });
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:3330"],
+    origin: ["http://localhost:5173", process.env.FRONTEND_URL],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
