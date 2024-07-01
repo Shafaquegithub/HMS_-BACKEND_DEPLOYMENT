@@ -13,7 +13,10 @@ const app = express();
 config({ path: "config/config.env" });
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL, process.env.LOCALHOST_URL],
+    origin: [
+      "https://hospital-management-system-si.netlify.app/",
+      process.env.LOCALHOST_URL,
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
